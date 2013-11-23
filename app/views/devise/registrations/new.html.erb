@@ -1,18 +1,29 @@
-<h2>Sign up</h2>
+<div class="container">
+
+<div class="well">
+<h2>Registrate en Dalemotor</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+
   <%= devise_error_messages! %>
 
   <div><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+  <div style= "margin-top:20px"><%= f.label :contraseña %><br />
+  <%= f.password_field :contraseña %></div>
 
-  <div><%= f.submit "Sign up" %></div>
+  <br>
+
+  <div><%= f.label :confirma_contraseña %><br />
+  <%= f.password_field :confirma_contraseña %></div>
+  <br>
+
+  <div><%= f.submit "Registrate", :class =>'btn btn-primary'  %></div>
 <% end %>
+<br>
 
 <%= render "devise/shared/links" %>
+<div/>
+<div/>
