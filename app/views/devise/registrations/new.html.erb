@@ -7,17 +7,20 @@
 
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
+   <div><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 
 
   <div style= "margin-top:20px"><%= f.label :contraseña %><br />
-  <%= f.password_field :contraseña %></div>
+  <%= f.password_field :password %></div>
 
   <br>
 
   <div><%= f.label :confirma_contraseña %><br />
-  <%= f.password_field :confirma_contraseña %></div>
+  <%= f.password_field :password_confirmation %></div>
+  <br>
+  <div><%= f.label :telefono %><br />
+  <%= f.phone_field :phone %></div>
   <br>
 
   <div><%= f.submit "Registrate", :class =>'btn btn-primary'  %></div>
