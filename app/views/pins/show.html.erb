@@ -1,0 +1,23 @@
+<div class="container">
+<div class="well">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripción:</strong>
+  <%= @pin.description %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @pin.text %>
+</p>
+
+<p>
+  <strong>Foto:</strong>
+  <%= image_tag (@pin.photo) %>
+</p>
+
+<%= link_to 'Editar', edit_pin_path(@pin) %> |
+<%= link_to 'Volver', pins_path %>
+</div>
+</div>
