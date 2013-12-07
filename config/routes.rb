@@ -1,15 +1,19 @@
 Pinterest::Application.routes.draw do
-  resources :pins
-
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  resources :pins 
+  
   devise_for :users
-  get "pages/index"
- root 'pages#index'
-
+  ActiveAdmin.routes(self)
+  resources:users, :only=>'show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  root 'pages#index'
+  
+  get 'home' => 'pages#index'
+  get 'aboutus' => 'pages#aboutus'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
